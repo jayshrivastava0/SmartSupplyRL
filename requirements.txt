@@ -1,0 +1,6 @@
+mcp
+packaging
+gymnasium
+numpy
+pandas
+stable-baselines3
