@@ -2,6 +2,11 @@
 
 This project implements a Reinforcement Learning (RL) based system for optimizing inventory decisions for products from the M5 forecasting competition dataset. It also includes traditional forecasting models (Prophet, ARIMA) for comparison and potential use in feature engineering.
 
+
+https://github.com/user-attachments/assets/c09e84e6-5dfe-4793-9957-d0a0ef21c9cb
+
+
+
 ## Project Structure
 
 ```
@@ -105,6 +110,10 @@ For more details on options for each command:
 ```bash
 python main.py <command> --help
 ```
+
+
+
+
 
 ## TensorBoard Monitoring
 
