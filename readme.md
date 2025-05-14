@@ -11,8 +11,7 @@ smart_supply_rl/
 │   ├── prophet_params.yaml
 │   └── dqn_params.yaml
 ├── data/
-│   └── M5_dataset/         # Raw M5 data (sales, calendar, prices) - Gitignored typically
-├── notebooks/              # Original POC and exploratory notebooks
+│   └── M5_dataset/         # Raw M5 data (sales, calendar, prices) - Gitignored
 ├── output/                 # Generated files (processed data, models, results, logs) - Gitignored
 │   ├── processed_data/
 │   ├── models/
