@@ -99,6 +99,9 @@ python main.py <command> [options]
     python main.py get_recommendation --product_id_full FOODS_3_090_CA_3_evaluation --inventory 25 [--model_suffix final_trained]
     ```
 
+
+![image](https://github.com/user-attachments/assets/0c12cee3-4a81-4d1d-899d-a60f0189f4f0)
+
 For more details on options for each command:
 ```bash
 python main.py <command> --help
