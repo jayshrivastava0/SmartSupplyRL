@@ -1,0 +1,38 @@
+# Default DQN parameters, can be overridden per product_id_full if needed
+# product_id_full (e.g., FOODS_3_090_CA_3_evaluation) can be a key here for overrides
+
+default:
+  total_timesteps: 100000
+  learning_rate: 0.0001
+  buffer_size: 50000       # Replay buffer size
+  learning_starts: 1000    # Number of steps before learning starts
+  batch_size: 64
+  tau: 1.0                 # Polyak update coefficient (1 for hard update, <1 for soft)
+  gamma: 0.99              # Discount factor
+  train_freq: 4            # Update the model every N steps (can be a tuple (X, "step|episode"))
+  gradient_steps: 1        # How many gradient steps to do after each N steps
+  
+  exploration_fraction: 0.15 # Fraction of total timesteps for exploration epsilon decay
+  exploration_initial_eps: 1.0 # Initial value of exploration epsilon
+  exploration_final_eps: 0.05  # Final value of exploration epsilon
+  
+  target_update_interval: 1000 # Update target network every N environment steps
+  
+  policy_network: "MlpPolicy" # Could also be CnnPolicy if observation space was image-like
+  # policy_kwargs: null # e.g. dict(net_arch=[64, 64])
+
+  save_freq_checkpoints: 25000 # Save a checkpoint every N steps
+  # seed: 42 # For reproducibility
+
+  # Parameters for the InventoryEnv, used when creating the environment for this agent
+  env_config:
+    lead_time: 2
+    holding_cost: 0.1       # Notebook uses 0.2, plan suggests 0.1. Let's stick to plan, then notebook values. Plan uses 0.2.
+    stockout_cost: 1.0      # Notebook uses 2.0, plan suggests 1.0. Plan uses 2.0.
+    order_cost: 0.0         # Notebook uses 5.0, plan suggests 0.0. Plan uses 5.0.
+    # unit_price: 2.0       # Only if include_revenue_in_reward is true
+    max_inventory: 100
+    max_order_quantity: 50
+    order_step_size: 10     # Actions are 0, 10, 20, ..., 50
+    initial_inventory: 20
+    include_revenue_in_reward: false # If True, reward = profit; else reward = -cost

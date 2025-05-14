@@ -1,0 +1,22 @@
+# Paths - relative to project root or absolute
+data_dir: "data/M5_dataset" # Expect M5_dataset to contain the CSVs
+output_dir: "output"
+
+m5_files:
+  sales: "sales_train_evaluation.csv"
+  calendar: "calendar.csv"
+  prices: "sell_prices.csv"
+
+# Data Processing
+total_days_in_dataset: 1941 # d_1 to d_1941 from sales_train_evaluation.csv
+default_train_days_split: 1500 # Default number of days for training timeseries data
+
+# Product specific settings (can be overridden per product)
+# Example for the product used in the notebook
+product_specific_configs:
+  FOODS_3_090_CA_3_evaluation:
+    train_days_split: 1500 # Overrides default_train_days_split if needed
+
+# Logging
+log_level: "INFO" # DEBUG, INFO, WARNING, ERROR, CRITICAL
+log_file_name: "app.log" # Will be stored in output/logs/

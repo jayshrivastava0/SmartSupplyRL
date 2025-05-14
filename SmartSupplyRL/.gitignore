@@ -1,0 +1,77 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Обычно создается PyInstaller в корневом каталоge вашего проекта в виде папки с тем же названием что и ваш основной скрипт без .py и некоторых других файлов рядом.
+# pyinstaller.spec
+# *.pyzw
+# Также обратите внимание что --onefile создает временную папку _MEIxxxxxx
+
+# M5 Dataset (as per your README)
+data/M5_dataset/
+# Or more specifically if other data files in data/ should be tracked:
+# data/M5_dataset/*.csv
+
+# Output files (as per your README)
+output/
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / Editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs folder (if not already covered by output/)
+logs/
+*.log
+
+# Local config (if you use a main_config.yaml.template and main_config.yaml for local values)
+# *.local.yaml
+# config/main_config.local.yaml

@@ -1,0 +1,24 @@
+# Default Prophet parameters, can be overridden per product_id_full if needed
+# product_id_full (e.g., FOODS_3_090_CA_3_evaluation) can be a key here for overrides
+
+default:
+  seasonality:
+    yearly: true
+    weekly: true
+    daily: false # Daily is often too noisy for sales, but can be enabled
+  holidays: true # Whether to extract and pass holiday dataframe to Prophet
+  # growth: 'linear' # or 'logistic' if cap and floor are provided
+  # changepoint_prior_scale: 0.05
+  # seasonality_prior_scale: 10.0
+  # holidays_prior_scale: 10.0
+
+  regressors:
+    price: true # If true, 'sell_price' will be added as a regressor
+    # Example for custom event regressors (if you engineer them as separate columns)
+    # event_type1_dummies: false
+    # event_type2_dummies: false
+
+  # Parameters for internal validation split if done within Prophet training script
+  # These are distinct from the main train/test split of the demand data
+  validation_forecast_horizon: 28
+  validation_gap_days: 28 # Gap between end of validation-train and start of validation-predict
